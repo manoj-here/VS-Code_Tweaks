@@ -1,0 +1,133 @@
+.monaco-workbench .part.editor>
+.content .editor-group-container.active>
+.title .tabs-container>
+.tab.active {
+    background-color: #2b2d45;
+    border-radius: 5px;
+    overflow: hidden;
+    &:hover{
+        background-color: #343258;
+    }   
+}
+
+.monaco-workbench .part.editor>
+.content .editor-group-container>
+.title:not(.two-tab-bars) .tabs-container>
+.tab.active.tab-border-bottom>
+.tab-border-bottom-container{
+    background-color: transparent;
+}
+.codicon-accounts-view-bar-icon:before {
+    content: ''; 
+    height: 35px;
+    width: 35px;
+    background: #343258;
+    border-radius: 50%;
+    background-image: url('/C:/Users/hello/.vscode/custom/avatar.png');
+    background-size: contain;
+    border: solid 3px;
+}
+.monaco-editor::after{
+    content: '';
+    height: 400px;
+    width: 500px;
+    background-image: url('/C:/Users/hello/.vscode/custom/bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    position: fixed;
+    bottom: 0px;
+    right: -150px;
+    opacity: 0.3;
+}
+.monaco-workbench .part.editor>
+.content .editor-group-container>
+.title .tabs-container>
+.tab.selected.tab-border-top>
+.tab-border-top-container {
+    display: none;
+}
+
+.quick-input-widget {
+    transform: translateY(-50%) !important;
+    top: 50% !important;
+    z-index: 100;
+    border: solid 2px #ffffff2d !important;
+    border-radius: 6px !important;
+    box-shadow: none !important;
+}
+#command-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0000003b;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    z-index: 99;
+}
+
+.editor-group-watermark {
+    max-width: none !important;
+}
+
+.command-center-center {
+    width:  auto !important;
+}
+
+.letterpress {
+    background-image: url("/C:/Users/hello/.vscode/custom/art.svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    width: 60% !important;    
+    mask-image: url('/C:/Users/hello/.vscode/custom/mask.png');
+    mask-size:contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+}
+
+.scrollbar.vertical .slider {
+    position: absolute !important;
+    right: 5px !important;
+    width: 6px !important;
+    background: #343a51 !important;
+    left: auto !important;
+    border-radius: 3px;    
+    &:hover{
+        background: #98a1ff !important;
+        box-shadow: 0 0 15px #6c84eed0;
+    }
+}
+
+
+.codicon-toolbar-more, .codicon-word-wrap {
+    display: block !important;
+}
+
+.decorationsOverviewRuler{
+    display: none !important;
+}
+
+.monaco-workbench .part>.composite.title>.title-actions {
+    display: none;
+}
+
+
+.breadcrumbs-below-tabs{
+    opacity: 0;
+    height: 7px;
+}
+
+.vs-dark .colorpicker-color-decoration {
+    border: solid 0.1em #ffffff10;
+    border-radius: 25%;
+}
+
+.monaco-editor .monaco-hover {
+    background-color: #1f1b3642;
+    border: solid 2px #ffffff20;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+}
+
