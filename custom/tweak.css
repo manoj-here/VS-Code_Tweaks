@@ -1,3 +1,5 @@
+
+/* styling tabs round tabs, no border, hover effect */
 .monaco-workbench .part.editor>
 .content .editor-group-container.active>
 .title .tabs-container>
@@ -10,13 +12,8 @@
     }   
 }
 
-.monaco-workbench .part.editor>
-.content .editor-group-container>
-.title:not(.two-tab-bars) .tabs-container>
-.tab.active.tab-border-bottom>
-.tab-border-bottom-container{
-    background-color: transparent;
-}
+
+/* replacing account icon with custom logo in activity bar */
 .codicon-accounts-view-bar-icon:before {
     content: ''; 
     height: 35px;
@@ -27,7 +24,9 @@
     background-size: contain;
     border: solid 3px;
 }
-.monaco-editor::after{
+
+/* adding custom image to show up on editor background bottom right  */
+/* .monaco-editor::after{
     content: '';
     height: 400px;
     width: 500px;
@@ -39,7 +38,9 @@
     bottom: 0px;
     right: -150px;
     opacity: 0.3;
-}
+} */
+
+/* hide top border from tabs  */
 .monaco-workbench .part.editor>
 .content .editor-group-container>
 .title .tabs-container>
@@ -48,6 +49,8 @@
     display: none;
 }
 
+
+/* styling command palette ctrl+shift+p or ctrl+p */
 .quick-input-widget {
     transform: translateY(-50%) !important;
     top: 50% !important;
@@ -56,6 +59,8 @@
     border-radius: 6px !important;
     box-shadow: none !important;
 }
+
+/* blur background style for new div behind command palette created with javascript */
 #command-blur {
     position: absolute;
     width: 100%;
@@ -67,14 +72,14 @@
     z-index: 99;
 }
 
+
+/* parent element of .letterpress  */
 .editor-group-watermark {
     max-width: none !important;
 }
 
-.command-center-center {
-    width:  auto !important;
-}
 
+/* replacing vscode icon from no active tab background with html 5 looking svg art along with other symbols */
 .letterpress {
     background-image: url("/C:/Users/hello/.vscode/custom/art.svg") !important;
     background-repeat: no-repeat !important;
@@ -87,6 +92,8 @@
     mask-repeat: no-repeat;
 }
 
+
+/* styling vertical scrollbars  */
 .scrollbar.vertical .slider {
     position: absolute !important;
     right: 5px !important;
@@ -100,30 +107,47 @@
     }
 }
 
-
-.codicon-toolbar-more, .codicon-word-wrap {
-    display: block !important;
+/* styling horizontal scrollbar  */
+.scrollbar.horizontal .slider{
+    position: absolute !important;
+    bottom: 0px !important;
+    height: 6px !important;
+    background: #343a51 !important;
+    top: auto !important;
+    border-radius: 3px;    
+    &:hover{
+        background: #98a1ff !important;
+        box-shadow: 0 0 15px #6c84eed0;
+    }
 }
 
+/* hide verticle scrollbar background that shows error warning etc on right side of editor   */
 .decorationsOverviewRuler{
     display: none !important;
 }
 
-.monaco-workbench .part>.composite.title>.title-actions {
-    display: none;
+/* hiding action buttons on sidebar next to activity bar */
+.monaco-workbench .part.sidebar .title-actions .actions-container {
+    width: 30px;
+    overflow: hidden;
+    &:hover{
+        width: auto;
+    }
 }
 
-
+/* hide breadcrumbs under tab bar  */
 .breadcrumbs-below-tabs{
     opacity: 0;
     height: 7px;
 }
 
+/* styling color pickers little icon  */
 .vs-dark .colorpicker-color-decoration {
     border: solid 0.1em #ffffff10;
     border-radius: 25%;
 }
 
+/* styling pop-up that shows up when mouse is hovered over different part of code  */
 .monaco-editor .monaco-hover {
     background-color: #1f1b3642;
     border: solid 2px #ffffff20;
