@@ -151,7 +151,6 @@
   "editor.minimap.enabled": false,
   "workbench.iconTheme": "eq-material-theme-icons-palenight",
   "workbench.tree.indent": 20,
-  "editor.lineNumbers": "relative",
   "editor.stickyScroll.enabled": false,
   "workbench.tree.renderIndentGuides": "none",
   "window.commandCenter": false,
@@ -160,5 +159,8 @@
   "python.createEnvironment.trigger": "off",
   "workbench.colorTheme": "Aesthetic (blue)",
   "workbench.productIconTheme": "material-product-icons",
+  "workbench.editorAssociations": {
+    "*.ico": "luna.editor"
+  },
   
 }
