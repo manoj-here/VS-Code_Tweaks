@@ -1,157 +1,112 @@
-
 /* styling tabs round tabs, no border, hover effect */
-.monaco-workbench .part.editor>
-.content .editor-group-container.active>
-.title .tabs-container>
-.tab.active {
-    background-color: #2b2d45;
-    border-radius: 5px;
-    overflow: hidden;
-    &:hover{
-        background-color: #343258;
-    }   
+.monaco-workbench .part.editor > .content .editor-group-container.active > .title .tabs-container > .tab.active {
+  background-color: #2b2d45;
+  border-radius: 5px;
+  overflow: hidden;
+  &:hover {
+    background-color: #343258;
+  }
 }
-
-
-/* replacing account icon with custom logo in activity bar */
-.codicon-accounts-view-bar-icon:before {
-    content: ''; 
-    height: 35px;
-    width: 35px;
-    background: #343258;
-    border-radius: 50%;
-    background-image: url('/C:/Users/hello/.vscode/custom/avatar.png');
-    background-size: contain;
-    border: solid 3px;
-}
-
-/* adding custom image to show up on editor background bottom right  */
-/* .monaco-editor::after{
-    content: '';
-    height: 400px;
-    width: 500px;
-    background-image: url('/C:/Users/hello/.vscode/custom/bg.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    position: fixed;
-    bottom: 0px;
-    right: -150px;
-    opacity: 0.3;
-} */
 
 /* hide top border from tabs  */
-.monaco-workbench .part.editor>
-.content .editor-group-container>
-.title .tabs-container>
-.tab.selected.tab-border-top>
-.tab-border-top-container {
-    display: none;
+.monaco-workbench
+  .part.editor
+  > .content
+  .editor-group-container
+  > .title
+  .tabs-container
+  > .tab.selected.tab-border-top
+  > .tab-border-top-container {
+  display: none;
 }
-
 
 /* styling command palette ctrl+shift+p or ctrl+p */
 .quick-input-widget {
-    transform: translateY(-50%) !important;
-    top: 50% !important;
-    z-index: 100;
-    border: solid 2px #ffffff2d !important;
-    border-radius: 6px !important;
-    box-shadow: none !important;
+  transform: translateY(-50%) !important;
+  top: 50% !important;
+  z-index: 100;
+  border: solid 2px #ffffff2d !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
 }
 
 /* blur background style for new div behind command palette created with javascript */
 #command-blur {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #0000003b;
-    top: 0;
-    left: 0;
-    backdrop-filter: blur(10px);
-    z-index: 99;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #0000003b;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  z-index: 99;
 }
-
 
 /* parent element of .letterpress  */
-.editor-group-watermark {
-    max-width: none !important;
-}
-
+/* .editor-group-watermark {
+  max-width: none !important;
+} */
 
 /* replacing vscode icon from no active tab background with html 5 looking svg art along with other symbols */
+/* .letterpress {
+  background-image: url("/C:/Users/hello/.vscode/custom/art.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: contain !important;
+  width: 60% !important;
+  mask-image: url("/C:/Users/hello/.vscode/custom/mask.png");
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+} */
+
 .letterpress {
-    background-image: url("/C:/Users/hello/.vscode/custom/art.svg") !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-    background-size: contain !important;
-    width: 60% !important;    
-    mask-image: url('/C:/Users/hello/.vscode/custom/mask.png');
-    mask-size:contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
+  filter: opacity(0.3) !important;
 }
 
-
-/* styling vertical scrollbars  */
-.scrollbar.vertical .slider {
-    position: absolute !important;
-    right: 5px !important;
-    width: 6px !important;
-    background: #343a51 !important;
-    left: auto !important;
-    border-radius: 3px;    
-    &:hover{
-        background: #98a1ff !important;
-        box-shadow: 0 0 15px #6c84eed0;
-    }
+/* center aligning icons on activity bar */
+.monaco-workbench .pane-composite-part > .header-or-footer .composite-bar-container {
+  justify-content: center;
 }
 
-/* styling horizontal scrollbar  */
-.scrollbar.horizontal .slider{
-    position: absolute !important;
-    bottom: 0px !important;
-    height: 6px !important;
-    background: #343a51 !important;
-    top: auto !important;
-    border-radius: 3px;    
-    &:hover{
-        background: #98a1ff !important;
-        box-shadow: 0 0 15px #6c84eed0;
-    }
-}
-
-/* hide verticle scrollbar background that shows error warning etc on right side of editor   */
-.decorationsOverviewRuler{
-    display: none !important;
+/* adding border bottom to activitybar */
+.monaco-workbench .pane-composite-part:not(.empty) > .header {
+  border-bottom: 1px solid #ffffff11 !important;
 }
 
 /* hiding action buttons on sidebar next to activity bar */
 .monaco-workbench .part.sidebar .title-actions .actions-container {
-    width: 30px;
-    overflow: hidden;
-    &:hover{
-        width: auto;
-    }
-}
-
-/* hide breadcrumbs under tab bar  */
-.breadcrumbs-below-tabs{
-    opacity: 0;
-    height: 7px;
+  width: 30px;
+  height: 30px;
+  float: right;
+  overflow: hidden;
+  &:hover {
+    border: solid 2px #ffffff20;
+    width: auto;
+    padding-left: 5px;
+    z-index: 1000;
+    border-radius: 10px;
+  }
 }
 
 /* styling color pickers little icon  */
 .vs-dark .colorpicker-color-decoration {
-    border: solid 0.1em #ffffff10;
-    border-radius: 25%;
+  border: solid 0.1em #ffffff10;
+  border-radius: 25%;
 }
 
 /* styling pop-up that shows up when mouse is hovered over different part of code  */
 .monaco-editor .monaco-hover {
-    background-color: #1f1b3642;
-    border: solid 2px #ffffff20;
-    border-radius: 10px;
-    backdrop-filter: blur(30px);
+  background-color: #1f1b3630;
+  border: solid 2px #ffffff20;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
 }
 
+/* styling sidebar title  */
+.monaco-workbench .part.sidebar > .title > .title-label h2 {
+  color: #b7c4f3 !important;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: small;
+}
